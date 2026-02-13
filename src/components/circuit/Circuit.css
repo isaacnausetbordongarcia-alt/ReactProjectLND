@@ -1,0 +1,158 @@
+.circuit-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  font-family: "Titillium Web", system-ui, sans-serif;
+}
+
+.circuits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+.circuit-card-container {
+  flex: 0 0 calc(33.333% - 1rem);
+  box-sizing: border-box;
+}
+
+.circuit-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  font-family: "Titillium Web", system-ui, sans-serif;
+}
+
+
+.circuit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.circuit-round {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.circuit-country {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.circuit-gp {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.circuit-date {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.circuit-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.circuits-flags-container {
+  width: 3rem;
+  height: 3rem;
+}
+
+.circuits-imgs {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.circuits-grand-prix-map-container {
+  width: 6rem;
+}
+
+.circuits-grand-prix-map {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 730px) {
+    .circuits-grid {
+    margin: 1rem;
+    padding: 0;
+    gap: 0.75rem;
+  }
+  
+  .circuit-card-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .circuit-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem;
+    gap: 1rem;
+  }
+  
+  .circuit-right {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .circuit-text {
+    align-items: center;
+  }
+
+  .circuit-country {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .circuits-grid {
+    margin: 1rem;
+    padding: 0;
+    gap: 0.75rem;
+  }
+  
+  .circuit-card-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .circuit-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem;
+    gap: 1rem;
+  }
+  
+  .circuit-right {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .circuit-text {
+    align-items: center;
+  }
+
+  .circuit-country {
+    font-size: 1.5rem;
+  }
+}
+

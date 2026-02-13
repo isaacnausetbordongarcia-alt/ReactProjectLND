@@ -11,12 +11,7 @@ function Header() {
     return (
         <>
             <div className="header-container-holder">
-                <img
-                    className="header-logo"
-                    onClick={toggleSideMenu}
-                    src="f1-logo.png"
-                    alt="F1 Logo"
-                />
+                <img className="header-logo" onClick={toggleSideMenu} src="f1-logo.png" alt="F1 Logo"/>
                 <h1 className="header-title">FORMULA 1</h1>
             </div>
 
@@ -24,6 +19,7 @@ function Header() {
                 <ul>
                     <li>Inicio</li>
                     <li>Circuitos</li>
+                    <li>Contacto</li>
                 </ul>
             </div>
         </>
