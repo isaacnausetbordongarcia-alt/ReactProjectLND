@@ -24,34 +24,25 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Sección 3: Redes sociales */}
+
         <div className="footer-section">
           <h3>SÍGUENOS</h3>
           <div className="social-links">
-            <a href="https://github.com/isaacnausetbordongarcia-alt" target="_blank">
-              <i className="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/isaac-nauset" target="_blank">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com/isaacnauset" target="_blank">
-              <i className="fab fa-twitter"></i>
-            </a>
+            <a href="https://github.com/isaacnausetbordongarcia-alt" target="_blank"><i className="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/isaac-nauset" target="_blank"><i className="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/isaacnauset" target="_blank"><i className="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
 
-      {/* Línea legal */}
+
       <div className="footer-bottom">
         <p>
           © 2026 F1 Schedule. Todos los derechos reservados. | 
-          <Link to="/privacidad"> Política de Privacidad</Link> | 
-          <Link to="/cookies"> Política de Cookies</Link> | 
-          <Link to="/terminos"> Términos de Uso</Link>
+          <Link to="/privacy"> Política de Privacidad</Link> | 
+          <Link to="/term"> Términos de Uso</Link>
         </p>
-        <p className="footer-credit">
-          Desarrollado por <a href="https://github.com/isaacnausetbordongarcia-alt" target="_blank">Isaac Nauset</a>
-        </p>
+        <p className="footer-credit">Desarrollado por <a href="https://github.com/isaacnausetbordongarcia-alt">Isaac Nauset</a></p>
       </div>
     </footer>
   );
