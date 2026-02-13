@@ -99,7 +99,7 @@
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .contact-card {
     padding: 2rem 1.5rem;
