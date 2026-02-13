@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './Contact.css';
-import Footer from "../../components/footer/Footer"
-import Header from "../../components/header/Header"
+import Footer from "../../components/footer/Footer";
+import Header from "../../components/header/Header";
+import Mapa from '../../components/map/Map';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,8 +21,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Datos enviados:', formData);
-    alert('¡Mensaje enviado! (Demo)');
   };
 
   return (
@@ -30,27 +29,28 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-card">
           <h2 className="contact-title">CONTÁCTANOS</h2>
-          <p className="contact-subtitle">Déjanos tu mensaje sobre F1</p>
+          <p className="contact-subtitle">Déjanos tu opinión</p>
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <input type="text" name="name" placeholder="Tu nombre" value={formData.name} onChange={handleChange} required className="form-input" />
+              <input type="text" name="name" placeholder="Tu nombre" value={formData.name} onChange={handleChange} className="form-input" />
             </div>
-
             <div className="form-group">
-              <input type="email" name="email" placeholder="tu@email.com" value={formData.email} onChange={handleChange} required className="form-input" />
+              <input type="email" name="email" placeholder="tu@email.com" value={formData.email} onChange={handleChange} className="form-input" />
             </div>
-
             <div className="form-group">
               <input type="text" name="subject" placeholder="Asunto" value={formData.subject} onChange={handleChange} className="form-input" />
             </div>
-
             <div className="form-group">
-              <textarea name="message" placeholder="Tu mensaje..." rows="5" value={formData.message} onChange={handleChange} required className="form-textarea" />
+              <textarea name="message" placeholder="Tu mensaje..." rows="5" value={formData.message} onChange={handleChange} className="form-textarea" />
             </div>
 
-            <button type="submit" className="submit-btn"> ENVIAR MENSAJE </button>
+            <button type="submit" className="submit-btn">ENVIAR MENSAJE</button>
           </form>
+        </div>
+
+        <div className="map-container">
+          <Mapa />
         </div>
       </div>
       <Footer />

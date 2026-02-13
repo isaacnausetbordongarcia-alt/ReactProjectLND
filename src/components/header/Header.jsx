@@ -1,29 +1,30 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
-    const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
+  const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
 
-    const toggleSideMenu = () => {
-        setIsSideMenuVisible(prev => !prev);
-    };
+  const toggleSideMenu = () => {
+    setIsSideMenuVisible(prev => !prev);
+  };
 
-    return (
-        <>
-            <div className="header-container-holder">
-                <img className="header-logo" onClick={toggleSideMenu} src="f1-logo.png" alt="F1 Logo"/>
-                <h1 className="header-title">FORMULA 1</h1>
-            </div>
+  return (
+    <>
+      <div className="header-container-holder">
+        <img className="header-logo" onClick={toggleSideMenu} src="f1-logo.png" alt="F1 Logo" />
+        <h1 className="header-title">FORMULA 1</h1>
+      </div>
 
-            <div className={`header-side-menu ${isSideMenuVisible ? "open" : ""}`}>
-                <ul>
-                    <li>Inicio</li>
-                    <li>Circuitos</li>
-                    <li>Contacto</li>
-                </ul>
-            </div>
-        </>
-    );
+      <div className={`header-side-menu ${isSideMenuVisible ? "open" : ""}`}>
+        <ul>
+          <li><Link to="/home">Inicio</Link></li>
+          <li><Link to="/schedule">Circuitos</Link></li>
+          <li><Link to="/contact">Contacto</Link></li>
+        </ul>
+      </div>
+    </>
+  );
 }
 
 export default Header

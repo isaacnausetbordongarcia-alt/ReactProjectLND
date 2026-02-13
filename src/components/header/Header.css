@@ -2,10 +2,9 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    background-image: url("../../../public/imagen-fondo.jpg");
+    background-image: url("/imagen-fondo.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-
 }
 
 .header-logo {
@@ -14,7 +13,6 @@
 }
 
 .header-title {
-    padding-top: 0.5em;
     color: white;
     font-size: 2em;
     font-weight: bold;
@@ -49,4 +47,9 @@
 
 .header-side-menu li:hover {
     background: #222;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
 }
