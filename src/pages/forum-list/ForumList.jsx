@@ -64,7 +64,7 @@ function ForumList() {
         <div className="bicycle-list">
           {messages.map(b =>
             <div className="bike-item" key={b.key}>
-              <p>{b.user} {b.message}</p>
+              <p className="data-container">Usuario: {b.user} Mensaje/Comentario: {b.message}</p>
               <FaRegTrashAlt className="delete-bike" onClick={() => removeMessage(b.key)}/>
             </div>
           )}
