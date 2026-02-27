@@ -110,11 +110,7 @@ input[type="submit"]:active {
 
 .bike-item {
   display: flex;
-<<<<<<< HEAD
-  background-color: white;
-=======
   background-color: #1a1a1a;
->>>>>>> 5318525 (fix forum)
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -135,9 +131,6 @@ input[type="submit"]:active {
 
 .delete-bike {
   cursor: pointer;
-<<<<<<< HEAD
-  align-self: center;
-=======
   color: #cc0000;
   font-weight: bold;
   font-size: 1.1em;
@@ -149,5 +142,4 @@ input[type="submit"]:active {
 .delete-bike:hover {
   color: #ffffff;
   background-color: #cc0000;
->>>>>>> 5318525 (fix forum)
 }
