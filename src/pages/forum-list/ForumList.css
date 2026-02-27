@@ -6,6 +6,7 @@
   justify-content: center;
 }
 
+
 .bicycle-form-container {
   margin-top: 2em;
   width: 80vw;
@@ -13,6 +14,10 @@
 
 .bicycle-list {
   width: 80vw;
+}
+
+.data-container{
+    color: black;
 }
 
 #bicycle-form {
@@ -44,6 +49,7 @@ input[type="submit"] {
 
 .bike-item {
   display: flex;
+  background-color: white;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 10px;
@@ -54,4 +60,5 @@ input[type="submit"] {
 
 .delete-bike {
   cursor: pointer;
+  align-self: center;
 }
