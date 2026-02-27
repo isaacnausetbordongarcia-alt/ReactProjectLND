@@ -7,10 +7,11 @@ const getAllMessages = () => {
   return get(dbRef);
 };
 
-const addMessage = (user, message) => {
+const addMessage = (user, message, date) => {
   return push(dbRef, {
     user: user,
-    message: message
+    message: message,
+    date: date
   });
 };
 
