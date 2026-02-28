@@ -40,8 +40,11 @@ https://leafletjs.com/
 https://www.youtube.com/watch?v=jD6813wGdBA
 https://www.youtube.com/watch?v=yAy3-ei-wOE
 
-# Template (Sort of)
+# ReadMe Template (Sort of)
  https://github.com/othneildrew/Best-README-Template
+
+# Footer Template (Sort of)
+<img width="643" height="259" alt="image" src="https://github.com/user-attachments/assets/6fd56d66-ff17-4bb1-a50d-c28be7040c3b" />
 
 # Inspired In
 https://www.formula1.com/ <-Original and Offical Website
