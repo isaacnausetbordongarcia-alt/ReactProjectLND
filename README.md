@@ -1,16 +1,50 @@
-# React + Vite
+# About the project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This page is done by a student from I.E.S El Rincon. It's a fan made Website of F1(Fomula 1). Inside there is 3 pages, Home/Inicio, Circuitos/Tracks and Contactos/Contacts. Each one it's self explanatory. It's my first project with the framework React.
+Kudos to Tiburcio Cruz Ravelo for teaching us this framework.
 
-Currently, two official plugins are available:
+# Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-## React Compiler
+# Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Things you need to use the software and how to install them.
 
-## Expanding the ESLint configuration
+    npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    npm install npm@latest -g
+
+Installation
+
+Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services.
+
+    Clone the repo
+
+    git clone https://github.com/github_username/repo_name.git
+
+    Install NPM packages
+
+    npm install
+
+    Change git remote url to avoid accidental pushes to base project
+
+    git remote set-url origin github_username/repo_name
+    git remote -v # confirm the changes
+
+
+
+# Webs and Links Visited for Information
+
+https://leafletjs.com/
+https://www.youtube.com/watch?v=jD6813wGdBA
+https://www.youtube.com/watch?v=yAy3-ei-wOE
+
+# ReadMe Template (Sort of)
+ https://github.com/othneildrew/Best-README-Template
+
+# Footer Template (Sort of)
+<img width="643" height="259" alt="image" src="https://github.com/user-attachments/assets/6fd56d66-ff17-4bb1-a50d-c28be7040c3b" />
+
+# Inspired In
+https://www.formula1.com/ <-Original and Offical Website
