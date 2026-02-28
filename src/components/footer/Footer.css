@@ -1,6 +1,6 @@
 .footer {
   background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
-  color: #fff;
+  color: #ffffff;
   padding: 3rem 2rem 1.5rem;
   border-top: 1px solid #333;
 }
@@ -39,7 +39,7 @@
 }
 
 .footer-section a {
-  color: #ccc;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
