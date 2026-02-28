@@ -3,8 +3,7 @@
   box-sizing: border-box;
 }
 
-
-.bicycle-list-main-container {
+.message-list-main-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,7 +15,7 @@
 }
 
 
-.bicycle-form-container {
+.message-form-container {
   margin-top: 2em;
   width: 80vw;
   background-color: #1a1a1a;
@@ -38,13 +37,13 @@
 }
 
 
-.bicycle-list {
+.message-list {
   width: 80vw;
   margin-top: 1.5em;
 }
 
 
-#bicycle-form {
+#message-form {
   padding-top: 1em;
   width: 100%;
   border-top: 2px solid #cc0000;
@@ -55,7 +54,7 @@
   gap: 0.5em;
 }
 
-#bicycle-form > input[type=text] {
+#message-form > input[type=text] {
   width: 60vw;
   margin-top: 0.5em;
   text-align: center;
@@ -66,11 +65,36 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-#bicycle-form > input[type=text]:focus {
+#message-form > input[type=text]:focus {
   border-color: #cc0000;
   box-shadow: 0 0 6px rgba(204, 0, 0, 0.5);
 }
 
+.bike-message {
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-left: 3px solid #cc0000;
+  padding-left: 0.75em;
+  display: block;
+  
+}
+
+.container-info {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #2a2a2a;
+  border-bottom: 2px solid #cc0000;
+  padding: 0.6em 1em;
+}
+
+.container-info > div {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+}
 
 input[type="submit"] {
   background-color: #cc0000;
@@ -107,19 +131,15 @@ input[type="submit"]:active {
   margin-top: 0.5em;
 }
 
-
 .bike-item {
   display: flex;
-  background-color: #1a1a1a;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  border-radius: 4px;
-  border: 1px solid #333333;
-  border-left: 4px solid #cc0000;
-  padding: 0.75em 1em;
-  margin: 0.75em 0;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  background-color: #111111;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 0.85em 1em;
+  margin: 0;
+  transition: background-color 0.15s ease;
+  gap: 0.5em;
 }
 
 .bike-item:hover {
@@ -127,7 +147,6 @@ input[type="submit"]:active {
   border-left-color: #ff3333;
   box-shadow: 0 2px 8px rgba(204, 0, 0, 0.2);
 }
-
 
 .delete-bike {
   cursor: pointer;
@@ -142,4 +161,35 @@ input[type="submit"]:active {
 .delete-bike:hover {
   color: #ffffff;
   background-color: #cc0000;
+}
+
+.forum-title{
+  text-align: center;
+  background-clip: text;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 0.5em;
+  color: transparent;
+  color: #ff0000;
+  text-shadow:
+    0 0 6px #ff0000,
+    0 0 20px #cc0000;
+}
+
+.col-message  { flex: 3; }
+.col-user    { flex: 2; }
+.col-last    { flex: 2; }
+.col-delete  { flex: 0 0 40px; text-align: right; }
+
+.bike-user {
+  color: #f0f0f0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.bike-date {
+  color: #cc0000;
+  font-size: 0.75rem;
+  font-family: 'Courier New', monospace;
 }
