@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { FaRegTrashAlt } from 'react-icons/fa';
+import { FaRegTrashAlt, FaEdit } from 'react-icons/fa';
 import ForumService from "../../services/forum.service";
 import "./ForumList.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
+
 
 function ForumList() {
   const [messages, setMessages] = useState([]);
@@ -35,6 +36,30 @@ function ForumList() {
       getAllMessages();
     });
   }
+
+  const [editingKey, setEditingKey] = useState(null);
+  const [editValues, setEditValues] = useState({ user: "", message: "" });
+
+  const editMessage = (key) => {
+    const messageToEdit = messages.find(m => m.key === key);
+    setEditingKey(key);
+    setEditValues({ user: messageToEdit.user, message: messageToEdit.message });
+  };
+
+  const saveMessage = (key) => {
+    ForumService.updateMessage(key, editValues.user, editValues.message)
+      .then(() => {
+        setMessages(messages.map(m =>
+          m.key === key ? { ...m, user: editValues.user, message: editValues.message } : m
+        ));
+        setEditingKey(null);
+      })
+      .catch(err => console.error(err));
+  };
+
+  const cancelEdit = () => {
+    setEditingKey(null);
+  };
 
   const addMessage = (e) => {
     e.preventDefault();
@@ -93,16 +118,34 @@ function ForumList() {
           {messages.map(b =>
             <div className="bike-item" key={b.key}>
               <div className="col-message">
-                <span className="bike-message">{b.message}</span>
+                {editingKey === b.key
+                  ? <input value={editValues.message} onChange={(e) =>
+                    setEditValues({ ...editValues, message: e.target.value })} />
+                  : <span className="bike-message">{b.message}</span>
+                }
               </div>
               <div className="col-user">
-                <span className="bike-user">{b.user}</span>
+                {editingKey === b.key
+                  ? <input value={editValues.user} onChange={(e) =>
+                    setEditValues({ ...editValues, user: e.target.value })} />
+                  : <span className="bike-user">{b.user}</span>
+                }
               </div>
               <div className="col-last">
                 <span className="bike-date">{b.date}</span>
               </div>
               <div className="col-delete">
-                <FaRegTrashAlt className="delete-bike" onClick={() => removeMessage(b.key)} />
+                {editingKey === b.key ? (
+                  <>
+                    <button onClick={() => saveMessage(b.key)}>✅</button>
+                    <button onClick={cancelEdit}>❌</button>
+                  </>
+                ) : (
+                  <>
+                    <FaEdit className="edit-bike" onClick={() => editMessage(b.key)} />
+                    <FaRegTrashAlt className="delete-bike" onClick={() => removeMessage(b.key)} />
+                  </>
+                )}
               </div>
             </div>
           )}
