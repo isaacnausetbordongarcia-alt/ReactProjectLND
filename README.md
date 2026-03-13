@@ -48,3 +48,7 @@ https://www.youtube.com/watch?v=yAy3-ei-wOE
 
 # Inspired In
 https://www.formula1.com/ <-Original and Offical Website
+
+# Rss Reader
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/9ac43907-d83d-48f4-a285-882612b8869d" />
+
