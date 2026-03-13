@@ -5,6 +5,8 @@ import Contact from "./pages/contact/Contact"
 import Privacy from "./components/privacy/Privacy"
 import Term from "./components/term/Term"
 import ForumList from "./pages/forum-list/ForumList"
+import Newsf1 from "./pages/news/Newsf1"
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Route path="/schedule" element={<Schedule />}/>
       <Route path="/contact" element={<Contact />}/>
       <Route path="/forum-list" element={<ForumList />}/>
+      <Route path="/news" element={<Newsf1 />}/>
       <Route path="/privacy" element={<Privacy />}/>
       <Route path="/term" element={<Term />}/>
       <Route path="*" element={<Home/>}/>

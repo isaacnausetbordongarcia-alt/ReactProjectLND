@@ -1,5 +1,5 @@
 import db from "../firebase";
-import { ref, get, remove, push } from "firebase/database";
+import { ref, get, remove, push, update } from "firebase/database";
 
 const dbRef = ref(db, "/DataBase-WebPage");
 
@@ -20,8 +20,14 @@ const removeMessage = (key) => {
   return remove(dbRefMessage);
 };
 
+const updateMessage = (key, user, message) => {
+  const dbRefMessage = ref(db, `/DataBase-WebPage/${key}`);
+  return update(dbRefMessage, { user, message });
+};
+
 export default {
   getAllMessages,
   addMessage,
   removeMessage,
+  updateMessage,
 };

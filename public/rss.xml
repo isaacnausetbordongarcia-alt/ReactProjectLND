@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+    <title>Mis noticias F1</title>
+    <link>https://database-react-7b010.web.app/news</link>
+    <description>Una web con noticias sobre Formula 1</description>
+    <item>
+      <title>Shanghai favorece a la nueva F1: más energía y menos limitaciones para los pilotos</title>
+      <link></link>
+      <description>Shanghai favorecerá al nuevo reglamento de F1: las numerosas frenadas y menores
+        tramos a fondo permitirán alcanzar hasta 9 MJ en clasificación y reducir el lift and coast
+        visto en Melbourne.</description>
+    </item>
+    <item>
+      <title>Por qué la carrera de F1 en China debería ser "más normal" que Melbourne</title>
+      <link></link>
+      <description>El circuito de Shanghai debería ofrecer una carrera menos crítica desde el punto
+        de vista energético que el estreno de la F1 en 2026 en Melbourne, que se convirtió en el
+        gran tema de conversación tras el GP de Australia. </description>
+    </item>
+  </channel>
+
+</rss>
