@@ -92,3 +92,8 @@ ul li a{
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+
+.rss-icon-container img{
+    height: 2em;
+    padding-left: 1em;
+}

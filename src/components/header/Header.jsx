@@ -23,7 +23,11 @@ function Header() {
           <img className="header-logo" src="f1-logo.png" alt="F1 Logo" />
           <h1 className="header-title">FORMULA 1</h1>
         </div>
-
+        <div className="rss-icon-container">
+          <a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="rss-link">
+            <img src="/rss.png" alt="RSS Feed" className="rss-icon" />
+          </a>
+        </div>
       </div>
 
       <div className={`header-side-menu ${isSideMenuVisible ? "open" : ""}`}>
