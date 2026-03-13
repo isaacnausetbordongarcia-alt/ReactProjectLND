@@ -80,6 +80,10 @@
   
 }
 
+.edit-bike{
+  color: white;
+}
+
 .container-info {
   display: flex;
   align-items: center;
@@ -150,7 +154,7 @@ input[type="submit"]:active {
 
 .delete-bike {
   cursor: pointer;
-  color: #cc0000;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1.1em;
   padding: 0.2em 0.5em;
