@@ -36,6 +36,7 @@ function Header() {
           <li><Link to="/schedule">Circuitos</Link></li>
           <li><Link to="/contact">Contacto</Link></li>
           <li><Link to="/forum-list">Foro</Link></li>
+          <li><Link to="/news">Noticias</Link></li>
         </ul>
       </div>
     </>
