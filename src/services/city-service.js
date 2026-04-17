@@ -10,7 +10,7 @@ const defaultChampionship = {
 
 const saveChampionship = async (championshipData) => {
   try {
-    const championshipRef = ref(database, "championship");
+    const championshipRef = ref(database, "DataBase-WebPage");
     await set(championshipRef, championshipData);
     return "championship";
   } catch (error) {
@@ -21,19 +21,23 @@ const saveChampionship = async (championshipData) => {
 
 const loadChampionship = async () => {
   try {
-    const championshipRef = ref(database, "championship");
-    const snapshot = await get(championshipRef);
+    const snapshot = await get(ref(database, "DataBase-WebPage"));
 
     if (snapshot.exists()) {
-      return snapshot.val();
+      const data = snapshot.val();
+
+      console.log("Firebase RAW:", data);
+
+      return Object.values(data);
     }
 
-    return defaultChampionship;
+    return [];
   } catch (error) {
-    console.error("Error loading championship data from database:", error);
+    console.error("Error loading data:", error);
     throw error;
   }
 };
+
 
 export default {
   saveChampionship,

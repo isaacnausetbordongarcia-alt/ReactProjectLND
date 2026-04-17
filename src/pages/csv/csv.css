@@ -1,30 +1,132 @@
-.home-export-examples {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: lightcoral;
-    border: 2px solid black;
-}
 
-.home-import-examples {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: lightblue;
-    border: 2px solid black;
-}
-
-.home-save-container{
+.csv-page {
+    min-height: 70vh;
+    padding: 40px 20px;
+    color: #fff;
+    background: linear-gradient(to bottom, #0a0a0a, #111);
     text-align: center;
-    padding: 10px;
 }
 
-.home-save-button{
-    padding: 10px 20px;
-    font-size: 16px;
+
+.csv-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #e10600;
+    letter-spacing: 2px;
+}
+
+
+.csv-page input[type="file"] {
+    background-color: #1a1a1a;
+    border: 2px dashed #444;
+    padding: 15px;
+    border-radius: 10px;
+    color: #ccc;
     cursor: pointer;
-    background-color: #ffca28;
-    border: none;
-    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.csv-page input[type="file"]:hover {
+    border-color: #e10600;
+    color: #fff;
+}
+
+
+.csv-page p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.error {
+    color: #ff4d4d;
     font-weight: bold;
+}
+
+
+.csv-preview {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.csv-preview p {
+    margin: 8px 0;
+    color: #ddd;
+}
+
+.csv-preview pre {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #0d0d0d;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    color: #00ff9c;
+}
+
+
+.file-upload {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #e10600, #ff3b3b);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+
+.file-upload:hover {
+    background: linear-gradient(135deg, #ff3b3b, #e10600);
+    transform: scale(1.05);
+}
+
+
+.file-upload:active {
+    transform: scale(0.98);
+}
+.export-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.export-buttons button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #222, #333);
+    border: 1px solid #e10600;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.export-buttons button:hover {
+    background: #e10600;
+    transform: scale(1.05);
+}
+
+
+
+
+@media (max-width: 600px) {
+    .csv-page h1 {
+        font-size: 2rem;
+    }
+
+    .csv-preview {
+        padding: 15px;
+    }
 }
