@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <record>
+    <date>15/4/2026</date>
+    <message>Boxers</message>
+    <user>piloto1</user>
+  </record>
+  <record>
+    <date>17/4/2026</date>
+    <message>Gran carrera</message>
+    <user>piloto2</user>
+  </record>
+  <record>
+    <date>18/4/2026</date>
+    <message>Vamos Ferrari</message>
+    <user>piloto3</user>
+  </record>
+</root>
