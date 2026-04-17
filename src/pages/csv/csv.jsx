@@ -1,83 +1,52 @@
-import { useEffect, useState } from "react";
-import ExportExamples from "../../components/export-examples/ExportExamples";
-import FormExample from "../../components/form-example/FormExample";
-import ImportExamples from "../../components/import-examples/ImportExamples";
-import Modal from "../../components/modal/Modal";
+import React, { useState } from "react";
+import { importFileToInternalJson } from "../../utils/file-import";
 import "./Csv.css";
-import CityService from "../../services/city-service";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
-function csv() {
+export default function Csv() {
+    const [fileData, setFileData] = useState(null);
+    const [error, setError] = useState("");
 
-  const [currentChampionship, setcurrentChampionship] = useState({});
-  const [isSaving, setIsSaving] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalTitle, setModalTitle] = useState("");
-  const [modalMessage, setModalMessage] = useState("");
+    const handleFile = async (e) => {
+        try {
+            setError("");
 
-  useEffect(() => {
-    CityService.loadCity().then((loadedCity) => {
-      setcurrentChampionship(loadedCity || {});
-    }).catch((error) => {
-      console.error("Error loading city:", error);
-    });
-  }, [])
+            const file = e.target.files[0];
+            if (!file) return;
 
-  const addLocation = (e) => {
-    e.preventDefault()
+            const result = await importFileToInternalJson(file);
+            setFileData(result);
 
-    setcurrentChampionship((prev) => {
-      return {
-        ...prev,
-        locations: [...prev.locations, {
-          name: e.target["location-name"].value,
-          surface: Number(e.target["location-surface"].value)
-        }]
-      }
-    })
+        } catch (err) {
+            setError(err.message || "File import failed");
+        }
+    };
 
-  }
+    return (
+        <>
+        <Header />
+        <div className="csv-page">
+            <h1>CSV</h1>
+            <input
+                type="file"
+                accept=".json,.xml,.csv"
+                onChange={handleFile}
+            />
 
-  const handleSave = async () => {
-    setIsSaving(true);
-    try {
-      await CityService.saveCity(currentChampionship);
-      setModalTitle("Success");
-      setModalMessage(`Championship saved successfully to database`);
-      setModalOpen(true);
-    } catch (error) {
-      setModalTitle("Error");
-      setModalMessage("Error saving Championship.");
-      setModalOpen(true);
-      console.error(error);
-    } finally {
-      setIsSaving(false);
-    }
-  }
+            {error && <p className="error">{error}</p>}
 
-  return (
-    <>
-      <div className="home-save-container">
-        <button
-          onClick={handleSave}
-          disabled={isSaving}
-          className="home-save-button"
-        >
-          {isSaving ? "Saving..." : "Save Championship Data"}
-        </button>
-      </div>
+            {!error && !fileData && <p>No imported file yet</p>}
 
-      <div className="home-export-examples">
-        <ExportExamples city={currentChampionship} />
-      </div>
-      <div className="home-import-examples">
-        <ImportExamples />
-      </div>
-      <div className="home-form-example">
-        <FormExample addLocation={addLocation} />
-      </div>
-      <Modal open={modalOpen} title={modalTitle} message={modalMessage} onClose={() => setModalOpen(false)} />
-    </>
-  )
+            {fileData && (
+                <div className="csv-preview">
+                    <p><strong>File:</strong> {fileData.fileName}</p>
+                    <p><strong>Format:</strong> {fileData.format}</p>
+                    <pre>{JSON.stringify(fileData.data, null, 2)}</pre>
+                </div>
+            )}
+        </div>
+        <Footer />
+        </>
+    );
 }
-
-export default csv

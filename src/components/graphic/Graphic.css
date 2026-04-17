@@ -1,0 +1,47 @@
+.chart-container {
+    margin-top: 40px;
+    background: linear-gradient(180deg, #111, #0a0a0a);
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    width: fit-content;
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.3);
+}
+
+.chart-container svg {
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.bar {
+    fill: #ff0101;
+    animation: grow 0.8s ease forwards;
+    transform-origin: bottom;
+}
+
+@keyframes grow {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.bar:hover {
+    fill: #582827;
+    transform: scaleY(1.08);
+    transform-origin: bottom;
+}
+
+.label {
+    fill: #aaa;
+    font-size: 12px;
+    text-anchor: middle;
+    transition: 0.3s;
+}
+
+.label:hover {
+    fill: #e10600;
+}

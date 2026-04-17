@@ -1,6 +1,6 @@
+import Papa from "papaparse";
 
 export const saveFileInFormat = async (format, data, fileName = "data.json") => {
-
   let description = "";
   let acceptedType = {};
   let content = "";
@@ -8,26 +8,25 @@ export const saveFileInFormat = async (format, data, fileName = "data.json") => 
   switch (format) {
     case "json":
       description = "JSON";
-      acceptedType = {
-        "application/json": [".json"],
-      };
-      content = JSON.stringify(data, null, 2); // JSON data should be passed as JSON object
+      acceptedType = { "application/json": [".json"] };
+      content = JSON.stringify(data, null, 2);
       break;
+
     case "xml":
       description = "XML";
       acceptedType = {
         "application/xml": [".xml"],
         "text/xml": [".xml"],
       };
-      content = data; // XML data should be passed as a string
+      content = typeof data === "string" ? data : String(data);
       break;
+
     case "csv":
       description = "CSV";
-      acceptedType = {
-        "text/csv": [".csv"],
-      };
-      content = data; // CSV data should be passed as a string
+      acceptedType = { "text/csv": [".csv"] };
+      content = typeof data === "string" ? data : Papa.unparse(data);
       break;
+
     default:
       throw new Error(`Unsupported format: ${format}`);
   }
@@ -36,8 +35,8 @@ export const saveFileInFormat = async (format, data, fileName = "data.json") => 
     suggestedName: fileName,
     types: [
       {
-        description: description,
-        accept: acceptedType
+        description,
+        accept: acceptedType,
       },
     ],
   });

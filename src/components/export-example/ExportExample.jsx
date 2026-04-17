@@ -7,7 +7,7 @@ function ExportExamples(props) {
               <pilots>
                 <name>Sebastian Vettel</name>
                 <debut>2002</debut>
-                <point>452</points>
+                <points>452</points>
                 <teams>
                   <team>
                     <name>Red bull</name>

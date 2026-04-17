@@ -1,4 +1,4 @@
-import Papa from "firebase/database";
+import Papa from "papaparse";
 
 function xmlNodeToObject(node) {
   const children = Array.from(node.children);
@@ -74,23 +74,7 @@ function parseFileContent(extension, text) {
   }
 }
 
-export async function importFileToInternalJson() {
-  const [fileHandle] = await window.showOpenFilePicker({
-    multiple: false,
-    types: [
-      {
-        description: "compatible files",
-        accept: {
-          "application/json": [".json"],
-          "application/xml": [".xml"],
-          "text/xml": [".xml"],
-          "text/csv": [".csv"],
-        },
-      },
-    ],
-  });
-
-  const file = await fileHandle.getFile();
+export async function importFileToInternalJson(file) {
   const text = await file.text();
   const extension = getExtension(file.name);
 
@@ -102,3 +86,4 @@ export async function importFileToInternalJson() {
     data,
   };
 }
+

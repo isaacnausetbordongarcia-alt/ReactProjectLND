@@ -7,6 +7,7 @@ import Term from "./components/term/Term"
 import ForumList from "./pages/forum-list/ForumList"
 import Newsf1 from "./pages/news/Newsf1"
 import csv from "./pages/csv/csv"
+import Csv from "./pages/csv/csv"
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
       <Route path="/contact" element={<Contact />}/>
       <Route path="/forum-list" element={<ForumList />}/>
       <Route path="/news" element={<Newsf1 />}/>
-      <Route path="/csv" element={<csv />}/>
+      <Route path="/csv" element={<Csv />}/>
       <Route path="/privacy" element={<Privacy />}/>
       <Route path="/term" element={<Term />}/>
       <Route path="*" element={<Home/>}/>
